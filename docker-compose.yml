@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  discord-rcon-slash-client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    volumes:
+      - ./src:/home/node/app/src
+      - ./nodemon.json:/home/node/app/nodemon.json
+    container_name: discord-rcon-slash-client
+    expose:
+      - '8020'
+    ports:
+      - '8020:8020'
+    command: npm run start:dev

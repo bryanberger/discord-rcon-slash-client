@@ -1,0 +1,14 @@
+{
+  "verbose": true,
+  "ignore": [],
+  "watch": [
+    "src/**/*.ts"
+  ],
+  "execMap": {
+    "ts": "node --inspect=0.0.0.0:9229 --nolazy -r ts-node/register"
+  },
+  "events": {
+    "start": "npm run sync:dev",
+    "restart": "npm run sync:dev"
+  }
+}
