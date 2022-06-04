@@ -6,9 +6,17 @@ A proof of concept rcon pass-through slash command for Discord. Currently setup 
 
 ```
 npm install
+copy .env.example .env # and fill it in
+```
 
-make up
+### Docker
 
+```
+make up # docker-compose up, used for dev
+
+make up-prod # used on the server to execute the prod compose file
+
+make down # docker-compose down
 ```
 
 Based off of https://github.com/Snazzah/slash-create-template

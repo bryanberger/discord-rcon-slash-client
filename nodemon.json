@@ -5,10 +5,10 @@
     "src/**/*.ts"
   ],
   "execMap": {
-    "ts": "node --inspect=0.0.0.0:9229 --nolazy -r ts-node/register"
+    "ts": "node --inspect=0.0.0.0:9229 --nolazy -r ts-node/register dist/index.js"
   },
   "events": {
-    "start": "npm run sync:dev",
-    "restart": "npm run sync:dev"
+    "start": "npm run build && npm run sync:dev",
+    "restart": "npm run build && npm run sync:dev"
   }
 }

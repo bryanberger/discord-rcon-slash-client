@@ -14,4 +14,6 @@ services:
       - '8020'
     ports:
       - '8020:8020'
+    env_file:
+      - .env
     command: npm run start:dev

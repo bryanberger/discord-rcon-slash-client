@@ -1,14 +1,6 @@
-import dotenv from 'dotenv';
 import { SlashCreator, FastifyServer } from 'slash-create';
 import path from 'path';
 import CatLoggr from 'cat-loggr/ts';
-
-let dotenvPath = path.join(process.cwd(), '.env');
-if (path.parse(process.cwd()).name === 'dist') {
-  dotenvPath = path.join(process.cwd(), '..', '.env');
-}
-
-dotenv.config({ path: dotenvPath });
 
 const logger = new CatLoggr().setLevel(process.env.COMMANDS_DEBUG === 'true' ? 'debug' : 'info');
 const creator = new SlashCreator({

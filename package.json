@@ -7,14 +7,13 @@
     "sync": "slash-up sync",
     "sync:dev": "slash-up sync -e development",
     "start": "NODE_PATH=./dist node dist/index.js",
-    "start:dev": "nodemon src/index.ts",
+    "start:dev": "nodemon",
     "build": "tsc -p .",
     "lint": "npx eslint --ext .ts ./src",
     "lint:fix": "npx eslint --ext .ts ./src --fix"
   },
   "dependencies": {
     "cat-loggr": "^1.1.0",
-    "dotenv": "^8.2.0",
     "fastify": "^3.9.2",
     "rcon": "^1.1.0",
     "slash-create": "^5.2.0"
