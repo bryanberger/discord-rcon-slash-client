@@ -7,4 +7,6 @@ RUN npm i
 
 FROM base as production
 ENV NODE_PATH=./dist
+ENV NODE_ENV=production
 RUN npm run build
+RUN npm prune --production
