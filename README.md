@@ -7,6 +7,7 @@ A proof of concept rcon pass-through slash command for Discord. Currently setup 
 ```
 npm install
 copy .env.example .env # and fill it in
+run `make create` to build the `base` image
 ```
 
 ### Docker

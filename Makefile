@@ -6,3 +6,9 @@ up-prod:
 
 down:
 		docker-compose down
+
+create:
+		docker-compose build --no-cache
+
+recreate:
+		docker-compose up --build --force-recreate
